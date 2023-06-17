@@ -1,0 +1,664 @@
+body {
+  display: grid;
+  grid-template-rows: auto auto 400px 5fr 30px auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "nav1"
+    "slideshow-container"
+    "main"
+    "whitespace"
+    "footer";
+  width: 100%;
+  height: 100%;
+  background-color: #717171;
+}
+p,
+h4 {
+  color: white;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  grid-area: slideshow-container;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.slideshow-container:hover {
+  cursor: pointer;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+.whitespace {
+  grid-area: whitespace;
+}
+
+/* header */
+header {
+  grid-area: header;
+  background-color: rgb(54, 63, 68);
+  color: rgb(255, 255, 255);
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  width: auto;
+  margin: 0;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.promise-nft {
+  display: flex;
+  gap: 7px;
+}
+.pharmacy-logo {
+  width: 20px;
+}
+.search {
+  width: 500px;
+}
+.promise-nft,
+.drops,
+.stats,
+.shopping-cart:hover {
+  cursor: pointer;
+  background-color: #4b5c5f;
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  display: inline-block;
+}
+ul li:hover ul {
+  display: block;
+}
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+  padding: 10px;
+}
+ul li ul li {
+  display: block;
+  height: 40px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+ul li ul li a {
+  display: block !important;
+}
+ul li ul li:hover {
+  background: #d3c4c4;
+}
+
+.nav1 {
+  grid-area: nav1;
+  display: flex;
+  justify-content: center;
+}
+
+.shrink-border {
+  border-radius: 4px;
+  background-color: #96a7b8;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+.shrink-border {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.shrink-border:after {
+  content: "»";
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.shrink-border:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+}
+
+.shrink-border:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+main {
+  grid-area: main;
+}
+.notable-container,
+.art-container,
+.gaming-container,
+.membership-container,
+.music-container,
+.pfps-container,
+.photography-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  width: auto;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  padding-left: 50px;
+}
+
+.card {
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: rgb(189, 186, 186) 0px 1px 1px 0px;
+  margin: 10px;
+  box-sizing: border-box;
+  transition: background-color 2s ease-out 100ms;
+}
+.card:hover {
+  cursor: pointer;
+  background-color: #bbb;
+}
+img {
+  width: 300px;
+  border-radius: 10px;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+h4 {
+  font-weight: 800;
+  font-size: 14px;
+}
+.title {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #727f83;
+  height: auto;
+  color: #fff;
+  padding-top: 15px;
+}
+.footer-content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  grid-template-columns: 50px 600px 100px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". content ."
+    ". copyright .";
+}
+
+.content {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 50px;
+  grid-area: content;
+}
+.about-info {
+  width: 600px;
+}
+
+.copyright {
+  grid-area: copyright;
+  display: block;
+}
+
+/* Media Query */
+
+/* For screen sizes between 828px and 1400px */
+
+@media screen and (max-width: 1400px) and (min-width: 828px) {
+  /* header */
+  header {
+    grid-area: header;
+    background-color: rgb(54, 63, 68);
+    color: rgb(255, 255, 255);
+  }
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+    margin: 0;
+    padding-top: 20px;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .promise-nft {
+    display: flex;
+    gap: 7px;
+  }
+  .pharmacy-logo {
+    width: 20px;
+  }
+  .search {
+    width: 200px;
+  }
+  .promise-nft,
+  .drops,
+  .stats,
+  .shopping-cart:hover {
+    cursor: pointer;
+    background-color: #4b5c5f;
+  }
+
+  ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    display: inline-block;
+  }
+  ul li:hover ul {
+    display: block;
+  }
+  ul li ul {
+    position: absolute;
+    width: 100px;
+    display: none;
+    padding: 10px;
+  }
+  ul li ul li {
+    display: block;
+    height: 35px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 7px;
+    padding-left: 3px;
+    padding-top: 3px;
+  }
+  ul li ul li a {
+    display: block !important;
+  }
+  ul li ul li:hover {
+    background: #d3c4c4;
+  }
+
+  .nav1 {
+    grid-area: nav1;
+    display: flex;
+    justify-content: center;
+  }
+  .shrink-border {
+    border-radius: 4px;
+    background-color: #96a7b8;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 7px;
+    width: auto;
+    height: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  }
+
+  /*Main content*/
+
+  main {
+    grid-area: main;
+  }
+  .notable-container,
+  .art-container,
+  .gaming-container,
+  .membership-container,
+  .music-container,
+  .pfps-container,
+  .photography-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    width: auto;
+  }
+
+  .card {
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: rgb(189, 186, 186) 0px 1px 1px 0px;
+    margin: 3px;
+    box-sizing: border-box;
+  }
+  img {
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    grid-area: slideshow-container;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+  }
+}
+
+/* For screen sizes between 481px and 827px */
+
+@media screen and (max-width: 827px) and (min-width: 481px) {
+  /* header */
+  header {
+    grid-area: header;
+    background-color: rgb(54, 63, 68);
+    color: rgb(255, 255, 255);
+  }
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: auto;
+    margin: 0;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .promise-nft {
+    display: flex;
+    gap: 7px;
+  }
+  .pharmacy-logo {
+    width: 20px;
+  }
+  .search {
+    width: 90px;
+  }
+  .promise-nft,
+  .drops,
+  .stats,
+  .shopping-cart:hover {
+    cursor: pointer;
+    background-color: #4b5c5f;
+  }
+
+  ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    display: inline-block;
+  }
+  ul li:hover ul {
+    display: block;
+  }
+  ul li ul {
+    position: absolute;
+    width: 100px;
+    display: none;
+    padding: 10px;
+  }
+  ul li ul li {
+    display: block;
+    height: 15px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 3px;
+    padding-left: 1px;
+    padding-top: 1px;
+  }
+  ul li ul li a {
+    display: block !important;
+  }
+  ul li ul li:hover {
+    background: #d3c4c4;
+  }
+
+  .nav1 {
+    grid-area: nav1;
+    display: flex;
+    justify-content: center;
+    width: 650px;
+  }
+  .shrink-border {
+    border-radius: 4px;
+    background-color: #96a7b8;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  }
+
+  /*Main content*/
+
+  main {
+    grid-area: main;
+  }
+  .notable-container,
+  .art-container,
+  .gaming-container,
+  .membership-container,
+  .music-container,
+  .pfps-container,
+  .photography-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    width: auto;
+  }
+
+  .card {
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: rgb(189, 186, 186) 0px 1px 1px 0px;
+    margin: 3px;
+    box-sizing: border-box;
+  }
+  img {
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    grid-area: slideshow-container;
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+  }
+}
+
+/* For Screen Sizes between 320px and 480px */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  body {
+    display: grid;
+    grid-template-rows: auto 400px 5fr 30px auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header"
+      "slideshow-container"
+      "main"
+      "whitespace"
+      "footer";
+    width: auto;
+    height: 100%;
+    background-color: #717171;
+  }
+
+  header {
+    grid-area: header;
+    background-color: rgb(54, 63, 68);
+    color: rgb(255, 255, 255);
+    width: auto;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+    margin: 0;
+    padding-top: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .search {
+    width: 90px;
+  }
+  .shopping-cart {
+    display: none;
+  }
+  .shopping-button {
+    display: none;
+  }
+  .drops {
+    display: none;
+  }
+  .stats {
+    display: none;
+  }
+  ul li ul li {
+    display: none;
+  }
+  .nav1 {
+    grid-area: nav1;
+    display: none;
+  }
+  /*Main content*/
+  main {
+    grid-area: main;
+  }
+  .notable-container,
+  .art-container,
+  .gaming-container,
+  .membership-container,
+  .music-container,
+  .pfps-container,
+  .photography-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    width: auto;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    grid-area: slideshow-container;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .card {
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgb(189, 186, 186) 0px 1px 1px 0px;
+    margin: 3px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    width: 390px;
+    border-radius: 10px;
+  }
+}

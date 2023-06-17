@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!--SlideShow Container-->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="./slide1.avif" style="width:100%">
+        <div class="text">Azuki</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="./slide2.avif" style="width:100%">
+        <div class="text">Boring Punks</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="./slide3.avif" style="width:100%">
+        <div class="text">BEANZ Official</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="./slide4.avif" style="width:100%">
+        <div class="text">Vipe Heroes</div>
+      </div>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+
+      </script>
+
+    <!--header-->
+    <header>
+      <div class="header-container" id="myHeader">
+        <div class="promise-nft">
+          <img class="pharmacy-logo" src="./pharmacy.jpg" alt="">
+          Promise NFTs
+        </div>
+        <div class="drops">
+          <ul>
+            <li>
+              Drops
+              <ul>
+                <li>Featured</li>
+                <li>Learn More</li>
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="stats"><ul>
+          <li>
+            Stats
+            <ul>
+              <li>Rankings</li>
+              <li>Activity</li>
+              
+            </ul>
+          </li>
+        </ul></div>
+        <div
+          class="sc-a2ec9d1b-0 bIvQmG sc-5b1c4486-2 jsGRZV NavSearch--mobile-search-input"
+          aria-expanded="false"
+          aria-controls="NavSearch--results"
+          role="combobox"
+        >
+          <div
+            color="gray"
+            class="sc-29427738-0 sc-630fc9ab-0 sc-99655001-0 sc-4422a702-0 jQNFPn bNkKFC dsowZP jZNcco"
+          >
+            <i
+              color="currentColor"
+              value="search"
+              size="24"
+              class="sc-b0f989b5-0 bnHJzG material-icons-outlined"
+              translate="no"
+            ></i>
+          </div>
+          <input
+            class="search"
+            aria-label="Search PromiseNft"
+            aria-multiline="false"
+            placeholder="Search items, collections, and accounts"
+            role="searchbox"
+            type="search"
+            value=""
+            style="cursor: text"
+          />
+        </div>
+
+        <div
+          height="100%"
+          class="sc-29427738-0 sc-630fc9ab-0 sc-99655001-0 sc-4422a702-0 sc-dada3b88-0 hTRaAa bNkKFC dsowZP jZNcco bhxycR"
+        >
+          <div
+            class="sc-29427738-0 sc-40f22686-0 sc-b57bc98c-2 cKdnBO jMCAEa dzRvRx"
+          >
+            <div
+              class="sc-29427738-0 sc-b57bc98c-1 cKdnBO"
+              aria-expanded="false"
+            >
+              <button
+                type="button"
+                class="sc-b267fe84-0 sc-ecf6b6b5-0 cEtajt dlCTHj"
+              >
+                <i
+                  color="currentColor"
+                  size="24"
+                  title="Wallet"
+                  value="wallet"
+                  class="sc-b0f989b5-0 bnHJzG material-icons-outlined"
+                  translate="no"
+                  >wallet</i
+                ><span
+                  color="inherit"
+                  height="24px"
+                  class="sc-29427738-0 sc-9c231a46-2 dCGjPo hmVqek"
+                  >Connect wallet</span
+                >
+              </button>
+            </div>
+            <a
+              class="sc-1f719d57-0 eiItIQ sc-b57bc98c-0 iGJHJU"
+              href="/account"
+              aria-expanded="false"
+              ><div
+                height="100%"
+                class="sc-29427738-0 sc-630fc9ab-0 sc-99655001-0 sc-4422a702-0 sc-dada3b88-0 hJipUT bNkKFC dsowZP jZNcco bhxycR"
+              >
+                <div
+                  class="sc-29427738-0 sc-630fc9ab-0 sc-99655001-0 sc-4422a702-0 sc-dada3b88-0 cKdnBO bNkKFC dsowZP jZNcco bhxycR"
+                >
+                  <i
+                    size="28"
+                    value="account_circle"
+                    class="sc-b0f989b5-0 bJdaey material-icons-outlined"
+                    translate="no"
+                    >account_circle</i
+                  >
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
+        <button type="button" class="shopping-button">
+          <i
+            size="24"
+            title="Cart"
+            value="shopping_cart"
+            class="shopping-cart"
+            translate="no"
+            >shopping_cart</i
+          >
+        </button>
+      </div>
+    </header>
+
+   
+    <!--Navigation bar-->
+    <div class="nav1">
+      <button class="shrink-border"><span>All</span></button>
+      <button class="shrink-border"><span>Art</span></button>
+      <button class="shrink-border"><span>Gaming</span></button>
+      <button class="shrink-border"><span>Membership</span></button>
+      <button class="shrink-border"><span>PFPs</span></button>
+      <button class="shrink-border"><span>Photography</span></button>
+      <button class="shrink-border"><span>Music</span></button>
+    </div>
+
+    <!--Notable Container-->
+    <main>
+      <h3>Notable Collections</h3>
+
+      <div class="notable-container">
+        <div class="card">
+          <img src="./1ffce3907fbbf9db9c3197074ba27f82.avif" alt="" />
+          <div class="title">The Grapes <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.20 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>828 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./65f22cd6199c570f64b7ff448f39ce80.avif" alt="" />
+          <div class="title">Neo Tokyo Citizens <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>6.25 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>12K ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small1.avif" alt="" />
+          <div class="title">On The Of The Oblivion <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>2.22 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>1,609 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="./small2.avif"
+            alt=""
+          />
+          <div class="title">Kaiju Kingz <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.17 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>33K ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./c2883f4c264b720fe1a7a1ff4119e367.avif" alt="" />
+          <div class="title">Otherside Vessels <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.25 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>31 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small3.jpeg" alt="" />
+          <div class="title">CleverGirls NFT <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.01 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>305 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="./small4.avif"
+            alt=""
+          />
+          <div class="title">Deep Black <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>2 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>34 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./a9a2a0d20283546982ce341c12d95695.avif" alt="" />
+          <div class="title">Auras by Jeremy Cowart <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.02 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.01 ETH</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Trending in Art</h3>
+
+      <!-- Art container -->
+
+      <div class="art-container">
+        <div class="card">
+          <img src="./art1.avif" alt="" />
+          <div class="title">
+            Chromie Squiggle by Snowfro <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>10.50 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>48 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./art2.avif" alt="" />
+          <div class="title">Opepen Edition <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.66 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>246 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./art3.avif" alt="" />
+          <div class="title">Genesis NFT Collections <span>&#10003;</span></div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.37 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>66 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small5.avif" alt="" />
+          <div class="title">
+            Articulations of Identity <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.03 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>3 ETH</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Trending in Gaming</h3>
+
+      <!-- Gaming container -->
+
+      <div class="gaming-container">
+        <div class="card">
+          <img src="./game1.avif" alt="" />
+          <div class="title">
+            Koye <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>1.50 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>38 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./game2.avif" alt="" />
+          <div class="title">
+            Grombies Eternal Entry <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.01 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.05 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./c2883f4c264b720fe1a7a1ff4119e367.avif" alt="" />
+          <div class="title">
+            Applied Primate Keycard <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.06 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.23 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./game4.avif" alt="" />
+          <div class="title">
+            Other Deed Expanded <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.64 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>41 ETH</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Trending in Membership</h3>
+
+      <!-- Membership container -->
+
+      <div class="membership-container">
+        <div class="card">
+          <img src="./small6.jpeg" alt="" />
+          <div class="title">
+            Arkhante <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>10.50 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>48 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./membership2.avif" alt="" />
+          <div class="title">
+            Artem Cards <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>10.50 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>48 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./photography3.avif" alt="" />
+          <div class="title">
+            The Bull <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.03 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.92 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small7.avif" alt="" />
+          <div class="title">
+            Curio Cards <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.50 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>2 ETH</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Trending in Music</h3>
+
+      <!-- Music container -->
+
+      <div class="music-container">
+        <div class="card">
+          <img src="./music1.avif" alt="" />
+          <div class="title">
+            Wvrps <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>9.20 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>12 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small12.avif" alt="" />
+          <div class="title">
+            CNP Music Cards <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.04 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.83 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./music3.avif" alt="" />
+          <div class="title">
+            MoonShot by Violetta Zironi <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>60.51 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>1,203 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./music4.avif" alt="" />
+          <div class="title">
+            SAN Origin <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>10.50 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>48 ETH</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Trending in PFPs</h3>
+
+      <!-- PFPs container -->
+
+      <div class="pfps-container">
+        <div class="card">
+          <img src="./pfp1.webp" alt="" />
+          <div class="title">
+            The Farmacy Phantoms <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.10 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>92 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small9.webp" alt="" />
+          <div class="title">
+            The Potatoz <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>2.29 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>174 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small10.png" alt="" />
+          <div class="title">
+            An Important Memory <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.17 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>18 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./pfp4.avif" alt="" />
+          <div class="title">
+            Distortion GEnesis by Nullish <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>2 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>31 ETH</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Trending in Photography</h3>
+
+      <!-- Photography container -->
+
+      <div class="photography-container">
+        <div class="card">
+          <img src="./small1.avif" alt="" />
+          <div class="title">
+            The Art Pixie EP <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.01 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.15 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./photography2.avif.avif" alt="" />
+          <div class="title">
+            Editions x Guido <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.01 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.18 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./small16.avif" alt="" />
+          <div class="title">
+            The Elysians <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>10.50 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>48 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./photography4.avif.avif" alt="" />
+          <div class="title">
+            First Day Out by DrifterShoots <span>&#10003;</span>
+          </div>
+          <div class="info">
+            <div class="floor">
+              <p>Floor</p>
+              <h4>0.02 ETH</h4>
+            </div>
+
+            <div class="total-volume">
+              <p>Total volume</p>
+              <h4>0.04 ETH</h4>
+            </div>
+          </div>
+        </div>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+
+      <div class="footer-content">
+        <div class=”content”>
+          <div class="promise-nft">
+            <img class="pharmacy-logo" src="pharmacy.jpg" alt="">
+          PromiseNft
+          </div>
+          <p class="about-info">The world's first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.</p>
+      </div>
+
+  <p class="copyright">copyright &copy;2023 <a href=”#”>PromiseNFTs</a>  </p>
+      </div>
+
+    </footer>
+
+  </body>
+</html>
